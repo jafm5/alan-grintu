@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import { Cover } from './Components/Cover/Cover';
 import { Navbar } from './Components/Navbar/Navbar';
 import { About } from './Components/About/About';
+import { Slider } from './Components/Slider/Slider';
 
 function App() {
   const [scrollHeight, setScrollHeight] = useState(0);
@@ -22,6 +23,7 @@ function App() {
     <Navbar isScrolling={scrollHeight}/>
       <Cover/>
       <About/>
+      <Slider/>
     </div>
   );
 }
