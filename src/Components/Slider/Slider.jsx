@@ -1,18 +1,17 @@
-import React from 'react';
-import './Slider.css';
+import React from "react";
 import Carousel,{ slidesToShowPlugin, slidesToScrollPlugin } from "@brainhubeu/react-carousel";
-import '@brainhubeu/react-carousel/lib/style.css';
-import Slides from "./Slides.js";
+import "@brainhubeu/react-carousel/lib/style.css";
+import Slides from "./Slides";
+import "./Slider.css";
 
-
-export const Slider = () => {
+const Slider = () => {
   return (
-    <div className='carousel-container'>
-        <div className='carousel-title'>
-            <h2>proyectos insignia</h2>
-        </div>
+    <div className="carousel-container">
+      <div className="carousel-title">
+        <h2>My Projects</h2>
+      </div>
 
-        <Carousel
+      <Carousel
             plugins={[
                 'arrows',
                 'infinite',
@@ -35,7 +34,23 @@ export const Slider = () => {
             offset={50}
             itemWidth={400}
             slides={Slides}
+            breakpoints={{
+              960:{
+                plugins: [
+                  
+                  {
+                    resolve: slidesToShowPlugin,
+                    options: {
+                      numberOfSlides: 1
+                    }
+                  },
+                ],
+                itemWidth:250,
+              }
+            }}
         />
     </div>
-  )
-}
+  );
+};
+
+export default Slider
