@@ -10,45 +10,23 @@ const Slider = () => {
       <div className="carousel-title">
         <h2>My Projects</h2>
       </div>
-
       <Carousel
-            plugins={[
-                'arrows',
-                'infinite',
-                'centered',
-                {
-                    resolve: slidesToShowPlugin,
-                    options: {
-                    numberOfSlides: 2,
-                    },
-                },   
-                {
-                    resolve: slidesToScrollPlugin,
-                    options: {
-                    numberOfSlides: 2,
-                    },
-                },      
-            ]}
-            slidesPerPage={4}
-            animationSpeed={200}
-            offset={50}
-            itemWidth={400}
-            slides={Slides}
-            breakpoints={{
-              960:{
-                plugins: [
-                  
-                  {
-                    resolve: slidesToShowPlugin,
-                    options: {
-                      numberOfSlides: 1
-                    }
-                  },
-                ],
-                itemWidth:250,
-              }
-            }}
-        />
+        arrows
+        slidesPerPage={3}
+        infinite
+        animationSpeed={200}
+        centered
+        offset={50}
+        itemWidth={400}
+        slides={Slides}
+        breakpoints={{
+          960: {
+            slidesPerPage: 1,
+            arrows: false,
+            itemWidth: 250,
+          },
+        }}
+      />
     </div>
   );
 };
