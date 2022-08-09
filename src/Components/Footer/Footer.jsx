@@ -14,7 +14,7 @@ export const Footer = () => {
         </div>
         <div className='footer-sns'>
             <div className='design-by'>
-                Design by: Jorge Fiquitiva
+                Design by: Jorge Fiquitiva Mora
             </div>
             <div className='sns-links'>
                 <a href="https://linkedin.com" target="_blank" rel="noreferrer">
