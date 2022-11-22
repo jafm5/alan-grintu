@@ -28,13 +28,13 @@ const slidesInfo =[
 
 const slides =slidesInfo.map(slide=>(
     <div className="slide-container">
-       <a href={slide.url} target="_blank"rel="noreferrer">        
+       <a href={slide.url} target="_blank" rel="noopener noreferrer">        
        <img src={slide.src} alt={slide.alt}></img>
        </a>
 
     
         <div className="slide-desc">
-   <a href={slide.url}target="_blank"rel="noreferrer" >
+   <a href={slide.url}target="_blank" rel="noopener noreferrer" >
             <span>{slide.desc}</span>
             </a>
         </div>
