@@ -7,7 +7,7 @@ export const Cover = () => {
     <div className='cover-container'>
         <video className='video' src={cover_video} autoPlay loop muted/>
         <h1>ALAN GRINTU</h1>
-        <p>DESAROLLAMOS TUS SUEÑOS</p>
+        <p className='p-cover'>DESAROLLAMOS TUS SUEÑOS</p>
     </div>
   )
 }
